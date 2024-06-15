@@ -1,0 +1,71 @@
+.talisman-stone {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  clip-path: polygon(31.25% 0%,
+      68.75% 0%,
+      100% 31.25%,
+      100% 68.75%,
+      68.75% 100%,
+      31.25% 100%,
+      0% 68.75%,
+      0% 31.25%);
+  background-color: rgb(190, 187, 187);
+  transform: rotate(10deg);
+  transition: transform 0.2s ease-in-out;
+  /* Add transition for smooth animation */
+}
+
+/* Add hover effect */
+.talisman-stone:hover {
+  transform: scale(1.2);
+  /* Scale up on hover */
+}
+
+.octagon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 95%;
+  height: 95%;
+  background-color: gray;
+  /* Gray color */
+  clip-path: polygon(31.25% 0%,
+      68.75% 0%,
+      100% 31.25%,
+      100% 68.75%,
+      68.75% 100%,
+      31.25% 100%,
+      0% 68.75%,
+      0% 31.25%);
+
+}
+
+.inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  clip-path: polygon(31.25% 0%, 68.75% 0%, 100% 31.25%, 100% 68.75%, 68.75% 100%, 31.25% 100%, 0% 68.75%, 0% 31.25%);
+  background:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 100%) 0 0/20px 20px,
+    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 100%) 10px 10px/20px 20px,
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.15) 10%, transparent 15%),
+    radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.15) 10%, transparent 15%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.15) 10%, transparent 15%),
+    radial-gradient(circle at 15% 85%, rgba(255, 255, 255, 0.15) 10%, transparent 15%);
+  background-color: #c0c0c0;
+  /* background-color: silver; */
+}
+
+.skill {
+  width: 60%;
+  /* Adjust the width of the image */
+}
