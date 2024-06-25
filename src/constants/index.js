@@ -33,6 +33,9 @@ import {
   contact,
   soundon,
   soundoff,
+  contactnew,
+  gitnew,
+  linkedinnew,
 } from "../assets/icons";
 
 export const skills = [
@@ -105,17 +108,17 @@ export const skills = [
 export const socialLinks = [
   {
     name: "Contact",
-    iconUrl: contact,
+    iconUrl: contactnew,
     links: "/contact",
   },
   {
     name: "GitHub",
-    iconUrl: github,
+    iconUrl: gitnew,
     links: "https://github.com/vijayaragavankts",
   },
   {
     name: "LinkedIn",
-    iconUrl: linkedin,
+    iconUrl: linkedinnew,
     links: "https://www.linkedin.com/in/vijayaragavan-vijay",
   },
 ];

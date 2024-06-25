@@ -8,7 +8,9 @@
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
 }
-
+div#root {
+  background: #050816;
+}
 body {
   font-family: "Work Sans", sans-serif;
 }

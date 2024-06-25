@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { logo1 } from "../assets/images/index";
+import { logo2 } from "../assets/images/index";
+import { logo3 } from "../assets/images/index";
 
 const Navbar = () => {
   return (
@@ -16,7 +18,7 @@ const Navbar = () => {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            isActive ? "text-blue-600" : "text-black"
+            isActive ? "text-blue-600" : "text-white"
           }
         >
           About
@@ -24,7 +26,7 @@ const Navbar = () => {
         <NavLink
           to="/projects"
           className={({ isActive }) =>
-            isActive ? "text-blue-600" : "text-black"
+            isActive ? "text-blue-600" : "text-white"
           }
         >
           Projects

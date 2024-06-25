@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer font-poppins">
       <hr className="border-slate-200" />
-      <div className="footer-container">
+      <div className="footer-container" style={{ color: "whitesmoke" }}>
         <p>
           &copy; 2024 <strong>Vijayaragavan</strong>. All rights reserved.
         </p>
@@ -20,7 +20,7 @@ const Footer = () => {
                   <img
                     src={link.iconUrl}
                     alt={link.name}
-                    className="w-6 h-6 object-contain"
+                    className="w-12 h-12 object-contain"
                   />
                 </button>
               );
@@ -30,7 +30,7 @@ const Footer = () => {
                   <img
                     src={link.iconUrl}
                     alt={link.name}
-                    className="w-6 h-6 object-contain"
+                    className="w-12 h-12 object-contain"
                   />
                 </Link>
               );

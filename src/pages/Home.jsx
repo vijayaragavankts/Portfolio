@@ -11,7 +11,7 @@ import { music_off, music_on, soundoff, soundon } from "../assets/icons/index";
 
 const Home = () => {
   const audioRef = useRef(new Audio(time_audio));
-  audioRef.current.volume = 0.6;
+  audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
 
   const [isRotating, setIsRotating] = useState(false);

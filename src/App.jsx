@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import StarsCanvas from "./models/Stars";
 
 const App = () => {
   return (
@@ -19,7 +20,14 @@ const App = () => {
             element={
               <>
                 <Routes>
-                  <Route path="/about" element={<About />} />
+                  <Route
+                    path="/about"
+                    element={
+                      <>
+                        <About />
+                      </>
+                    }
+                  />
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/contact" element={<Contact />} />
                 </Routes>

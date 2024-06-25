@@ -34,6 +34,9 @@ import api from "./api.png";
 import jwt from "./jwt.png";
 import music_on from "./music_on.png";
 import music_off from "./music_off.png";
+import gitnew from "./gitnew.png";
+import linkedinnew from "./linkedinnew.png";
+import contactnew from "./contactnew.png";
 
 export {
   css,
@@ -72,4 +75,7 @@ export {
   soundoff,
   music_off,
   music_on,
+  gitnew,
+  linkedinnew,
+  contactnew,
 };
