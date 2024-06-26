@@ -1,71 +1,88 @@
-.talisman-stone {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  display: inline-block;
-  margin: 20px;
-  clip-path: polygon(31.25% 0%,
-      68.75% 0%,
-      100% 31.25%,
-      100% 68.75%,
-      68.75% 100%,
-      31.25% 100%,
-      0% 68.75%,
-      0% 31.25%);
-  background-color: rgb(190, 187, 187);
-  transform: rotate(10deg);
-  transition: transform 0.2s ease-in-out;
-  /* Add transition for smooth animation */
+/* TalismanStone.css (or your existing CSS file) */
+
+.hover14 figure {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.6s;
 }
 
-/* Add hover effect */
-.talisman-stone:hover {
-  transform: scale(1.2);
-  /* Scale up on hover */
+.hover14 figure::before {
+    position: absolute;
+    top: 0;
+    left: -25%;
+    right: -20%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 25%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(35deg);
+    animation: shine 2s infinite;
+    /* Apply animation always */
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
-.octagon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 95%;
-  height: 95%;
-  background-color: gray;
-  /* Gray color */
-  clip-path: polygon(31.25% 0%,
-      68.75% 0%,
-      100% 31.25%,
-      100% 68.75%,
-      68.75% 100%,
-      31.25% 100%,
-      0% 68.75%,
-      0% 31.25%);
-
+@keyframes shine {
+    100% {
+        left: 220%;
+    }
 }
 
-.inside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 95%;
-  height: 95%;
-  clip-path: polygon(31.25% 0%, 68.75% 0%, 100% 31.25%, 100% 68.75%, 68.75% 100%, 31.25% 100%, 0% 68.75%, 0% 31.25%);
-  background:
-    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 100%) 0 0/20px 20px,
-    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 50%, transparent 100%) 10px 10px/20px 20px,
-    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.15) 10%, transparent 15%),
-    radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.15) 10%, transparent 15%),
-    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.15) 10%, transparent 15%),
-    radial-gradient(circle at 15% 85%, rgba(255, 255, 255, 0.15) 10%, transparent 15%);
-  background-color: #c0c0c0;
-  /* background-color: silver; */
+/* Additional styles for image sizing and layout */
+.grid-item {
+    
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transform: scale(0.7);
 }
 
-.skill {
-  width: 60%;
-  /* Adjust the width of the image */
+.grid-item img {
+
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .grid-item img:hover {
+    transform: scale(1.1);
+} */
+
+/* Optional: Adjust grid and item spacing */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+
+
+.hover14 figure img {
+    width: 100%;
+    display: block;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.hover14 figure:hover img {
+    transform: rotateY(180deg);
+}
+
+.hover14 figure .skill-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(360deg);
+    opacity: 0;
+    color: white;
+    transition: opacity 0.6s;
+}
+
+.hover14 figure:hover .skill-text,
+.hover14 figure img.active+.skill-text {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateY(0);
 }

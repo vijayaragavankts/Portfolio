@@ -145,16 +145,16 @@ function Island({ isRotating, setIsRotating, setCurrentStage, ...props }) {
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       switch (true) {
-        case normalization >= 0 && normalization <= 1:
+        case normalization >= -0.5 && normalization < Math.PI / 2:
           setCurrentStage(1);
           break;
-        case normalization >= 1.85 && normalization <= 3:
+        case normalization >= Math.PI / 2 && normalization < Math.PI:
           setCurrentStage(4);
           break;
-        case normalization >= 3.5 && normalization <= 4.75:
+        case normalization >= Math.PI && normalization < (3 * Math.PI) / 2:
           setCurrentStage(3);
           break;
-        case normalization >= 5.55 && normalization <= 6.75:
+        case normalization >= (3 * Math.PI) / 2 && normalization < 2 * Math.PI:
           setCurrentStage(2);
           break;
         default:

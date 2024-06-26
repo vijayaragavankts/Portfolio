@@ -16,7 +16,7 @@ const Projects = () => {
             Projects
           </span>
         </h1>
-        <p className="mt-5" style={{ color: "#ECFFE8", textAlign: "justify" }}>
+        <p className="mt-5" style={{ color: "#F6F6F6", textAlign: "justify" }}>
           I've embarked on several projects that hold a special place in my
           heart, each representing a significant milestone in my journey.I've
           gained valuable insights and honed my skills through hands-on
@@ -41,13 +41,13 @@ const Projects = () => {
                 <div className="mt-5 flex flex-col">
                   <h4
                     className="text-2xl font-poppins font-semibold"
-                    style={{ color: "#ECFFE8" }}
+                    style={{ color: "#F6F6F6" }}
                   >
                     {project.name}
                   </h4>
                   <p
                     className="mt-2 text-slate-500"
-                    style={{ color: "#ECFFE8" }}
+                    style={{ color: "#F6F6F6" }}
                   >
                     {project.description}
                   </p>
