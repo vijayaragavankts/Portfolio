@@ -96,12 +96,14 @@ const About = () => {
                     src={item.image}
                     alt={item.skill}
                     className={index === activeSkill ? "active" : "norm"}
+                    loading="lazy"
                   />
                   <div>
                     <img
                       src={item.skill}
                       alt={item.skill}
                       className="skill-text"
+                      loading="lazy"
                     />
                   </div>
                 </figure>
