@@ -8,6 +8,7 @@ import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
 import time_audio from "../assets/captain.mp3";
 import { music_off, music_on, soundoff, soundon } from "../assets/icons/index";
+import { Environment } from "@react-three/drei";
 
 const Home = () => {
   const audioRef = useRef(new Audio(time_audio));
@@ -90,6 +91,8 @@ const Home = () => {
             intensity={1}
           />
 
+          <Environment preset="sunset" />
+
           {/* <Bird /> */}
           <Sky isRotating={isRotating} />
 
@@ -100,6 +103,8 @@ const Home = () => {
             screenScale={islandScale}
             rotation={[0.1, 0.2077, 0]}
             setCurrentStage={setCurrentStage}
+            // receiveShadow
+            // castShadow
           />
 
           {/* <Plane

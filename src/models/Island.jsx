@@ -169,6 +169,7 @@ function Island({ isRotating, setIsRotating, setCurrentStage, ...props }) {
       {...props}
       scale={props.screenScale}
       position={props.position}
+      dispose={null}
     >
       {/* <a.group position={[-42.281, -1.801, 11.779]} rotation={[0, -0.185, 0]}>
           <mesh
@@ -1294,5 +1295,7 @@ function Island({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     </group>
   );
 }
+
+useGLTF.preload(IslandScene);
 
 export default Island;
