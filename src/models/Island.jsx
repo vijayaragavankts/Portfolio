@@ -41,7 +41,7 @@ function Island({ isRotating, setIsRotating, setCurrentStage, ...props }) {
       const delta = (clientX - lastX.current) / viewport.width;
       islandRef.current.rotation.y += delta * 0.01 * Math.PI;
       lastX.current = clientX;
-      rotationSpeed.current = delta * 0.1 * Math.PI;
+      rotationSpeed.current = delta * 0.25 * Math.PI;
     }
   };
 
